@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+{% block title %}Edit Student{% endblock title %}
+{% block main_content %}
+<section class="container">
+    <div class="row justify-content-around text-center mt-5">
+      <div class="col-sm-8">
+        <h3>Student Dashboard - Edit Details</h3>
+      </div>
+    </div>
+    <div class="row justify-content-around mt-3">
+      <div class="col-sm-4">
+        <form action="" method="POST" class="bg-white p-3 rounded shadow">
+              {% csrf_token %}
+              {{form.as_p}}
+              <input type="submit" value="Submit" class="btn btn-primary">
+        </form>
+      </div>
+    </div>
+
+</section>
+
+{% endblock main_content %}
